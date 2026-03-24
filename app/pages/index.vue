@@ -26,27 +26,27 @@
                 <div class="space-y-4">
                   <div class="flex items-center gap-4">
                     <div class="statute-bar h-12"></div>
-                    <span class="font-label text-secondary font-bold tracking-[0.2em] text-sm uppercase">
+                    <span class="font-label text-black font-bold tracking-[0.2em] text-sm uppercase">
                       Annual Financial Review
                     </span>
                   </div>
-                  <h2 class="font-headline text-primary text-6xl md:text-8xl font-black tracking-tighter leading-tight">
+                  <h2 class="font-headline text-[gold] text-6xl md:text-8xl font-black tracking-tighter leading-tight">
                     Treasurer's<br />Report 2024
                   </h2>
                 </div>
 
-                <div class="bg-surface-container-lowest p-8 border-l-8 border-primary shadow-sm max-w-2xl">
-                  <p class="font-headline text-2xl text-primary-container font-bold italic mb-2">
+                <div class="bg-surface-container-lowest p-8 border-l-8 border-[gold] shadow-sm max-w-2xl">
+                  <p class="font-headline text-2xl text-gray-700 font-bold italic mb-2">
                     Presented by Kizito Kumwenda, Treasurer
                   </p>
-                  <p class="font-body text-outline font-medium tracking-wide">
-                    13 Months Period Ended 31st January 2024
+                  <p class="font-body text-outline font-medium tracking-wide text-gray-400">
+                    13 Months Period Ended 31st January 2025
                   </p>
                 </div>
 
                 <div class="flex gap-4 pt-4">
                   <button
-                    class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 font-label font-bold tracking-widest text-xs rounded-lg hover:shadow-lg transition-all active:scale-95">
+                    class="bg-gradient-to-br from-[black] to-primary-container text-on-primary px-8 py-4 font-label font-bold tracking-widest text-xs rounded-lg hover:shadow-lg transition-all active:scale-95">
                     COMMENCE PRESENTATION
                   </button>
                   <button
@@ -63,7 +63,7 @@
                     class="w-full h-full object-cover opacity-90 grayscale group-hover:grayscale-0 transition-all duration-700"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi32Kerqb3FK_YYDMOA4KIfshE8virscHEfuiXhN4jq3NsYYVu3z_fuh4iqBqBtLJAdp5W_eF1NFKlTNLSpJnwFitszbcwbHPUuePy5Io-E-raTLlS6TZZ34T9xfPu-6NcBoz9sr7ZYfpwEvxE_zeXbTJJBZco1EdAemMRIWOEfw5-BBpEaBFD50hZrtnh6GOv6eop4efWC10Towous1afkYECRTwrdpNZmcgEU3FLO9pd0Xy4dwR-gxSlj3cRivKv1nSu8q4pR7o"
                     alt="Luxury law library interior" />
-                  <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                   <div class="absolute bottom-6 left-6 text-white">
                     <p class="font-headline font-bold text-xl tracking-tight">The 2024 Mandate</p>
                     <p class="font-body text-sm opacity-80">Fiscal Integrity &amp; Oversight</p>
@@ -83,13 +83,13 @@
               <div class="absolute top-0 right-0 p-8 opacity-5">
                 <span class="material-symbols-outlined text-9xl">trending_up</span>
               </div>
-              <p class="font-manrope text-xs font-bold uppercase tracking-widest text-secondary mb-4">
+              <p class="font-manrope text-xs font-bold uppercase tracking-widest text-blackmb-4">
                 Annual Financial Result
               </p>
-              <h3 class="text-7xl md:text-8xl font-notoSerif font-bold text-primary mb-2 tracking-tighter">
+              <h3 class="text-7xl md:text-8xl font-notoSerif font-bold text-[gold] mb-2 tracking-tighter">
                 K{{ surplusDisplay }}m
               </h3>
-              <p class="text-xl font-manrope font-medium text-on-surface-variant max-w-md">
+              <p class="text-xl font-manrope font-medium text-black max-w-md">
                 Comprehensive surplus achieved through strategic fiscal oversight and improved revenue collection.
               </p>
             </div>
@@ -99,16 +99,16 @@
               <div class="bg-surface-container-low p-8">
                 <span class="material-symbols-outlined text-secondary mb-4"
                   style="font-variation-settings: 'FILL' 1;">verified_user</span>
-                <h4 class="font-notoSerif font-bold text-xl text-primary mb-3">Statutory Compliance</h4>
+                <h4 class="font-notoSerif font-bold text-xl text-[gold] mb-3">Statutory Compliance</h4>
                 <p class="text-on-surface-variant text-sm leading-relaxed">
-                  Fully compliant with <span class="font-bold text-primary">section 86(2) of LELPA</span>, ensuring
+                  Fully compliant with <span class="font-bold text-black">section 86(2) of LELPA</span>, ensuring
                   transparency and accountability.
                 </p>
               </div>
               <div class="bg-surface-container-low p-8">
                 <span class="material-symbols-outlined text-secondary mb-4"
                   style="font-variation-settings: 'FILL' 1;">account_balance</span>
-                <h4 class="font-notoSerif font-bold text-xl text-primary mb-3">Stable Financial Position</h4>
+                <h4 class="font-notoSerif font-bold text-xl text-[gold] mb-3">Stable Financial Position</h4>
                 <p class="text-on-surface-variant text-sm leading-relaxed">
                   Resilient asset base and liquidity ratios maintained despite inflationary pressures in the domestic
                   economy.
@@ -136,15 +136,15 @@
                 <ul class="space-y-4">
                   <li class="flex justify-between items-end">
                     <span class="text-sm font-manrope text-on-surface-variant">Revenue Growth</span>
-                    <span class="font-manrope font-bold text-primary">+12.4%</span>
+                    <span class="font-manrope font-bold text-[gold]">+12.4%</span>
                   </li>
                   <li class="flex justify-between items-end">
                     <span class="text-sm font-manrope text-on-surface-variant">Member Compliance</span>
-                    <span class="font-manrope font-bold text-primary">94%</span>
+                    <span class="font-manrope font-bold text-[gold]">94%</span>
                   </li>
                   <li class="flex justify-between items-end">
                     <span class="text-sm font-manrope text-on-surface-variant">Admin Overhead</span>
-                    <span class="font-manrope font-bold text-primary">-2.1%</span>
+                    <span class="font-manrope font-bold text-[gold]">-2.1%</span>
                   </li>
                 </ul>
               </div>
