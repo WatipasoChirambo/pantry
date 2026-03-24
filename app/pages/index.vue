@@ -48,6 +48,7 @@
 
                 <div class="flex gap-4 pt-4">
                   <button
+                  @click="goToSlide"
                     class="bg-gradient-to-br from-[black] to-[gold]-container text-on-[gold] px-8 py-4 font-label font-bold tracking-widest text-xs rounded-lg hover:shadow-lg transition-all active:scale-95">
                     COMMENCE PRESENTATION
                   </button>
@@ -384,6 +385,7 @@ const slide = ref(0)
 const totalSlides = 6
 const nextSlide = () => slide.value = (slide.value + 1) % totalSlides
 const prevSlide = () => slide.value = (slide.value - 1 + totalSlides) % totalSlides
+const goToSlide = () => slide.value = 1
 
 // ------------------------
 // Animated Counters
