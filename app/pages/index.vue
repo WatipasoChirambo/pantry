@@ -37,7 +37,7 @@
 
                 <div class="bg-surface-container-lowest p-8 border-l-8 border-primary shadow-sm max-w-2xl">
                   <p class="font-headline text-2xl text-primary-container font-bold italic mb-2">
-                    Presented by Phatuma Amasi Mataka, Treasurer
+                    Presented by Kizito Kumwenda, Treasurer
                   </p>
                   <p class="font-body text-outline font-medium tracking-wide">
                     13 Months Period Ended 31st January 2024
