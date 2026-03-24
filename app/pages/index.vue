@@ -81,7 +81,7 @@
               <div class="absolute top-0 right-0 p-8 opacity-5">
                 <span class="material-symbols-outlined text-9xl">trending_up</span>
               </div>
-              <p class="font-manrope text-xs font-bold uppercase tracking-widest text-blackmb-4">
+              <p class="font-manrope text-xs font-bold uppercase tracking-widest text-black mb-4">
                 Annual Financial Result
               </p>
               <h3 class="text-7xl md:text-8xl font-notoSerif font-bold text-[gold] mb-2 tracking-tighter">
@@ -95,19 +95,19 @@
             <!-- Strategic Bullets -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div class="bg-surface-container-low p-8">
-                <span class="material-symbols-outlined text-secondary mb-4"
+                <span class="material-symbols-outlined text-black mb-4"
                   style="font-variation-settings: 'FILL' 1;">verified_user</span>
                 <h4 class="font-notoSerif font-bold text-xl text-[gold] mb-3">Statutory Compliance</h4>
-                <p class="text-on-surface-variant text-sm leading-relaxed">
+                <p class="text-gray-500 text-sm leading-relaxed">
                   Fully compliant with <span class="font-bold text-black">section 86(2) of LELPA</span>, ensuring
                   transparency and accountability.
                 </p>
               </div>
               <div class="bg-surface-container-low p-8">
-                <span class="material-symbols-outlined text-secondary mb-4"
+                <span class="material-symbols-outlined text-black mb-4"
                   style="font-variation-settings: 'FILL' 1;">account_balance</span>
                 <h4 class="font-notoSerif font-bold text-xl text-[gold] mb-3">Stable Financial Position</h4>
-                <p class="text-on-surface-variant text-sm leading-relaxed">
+                <p class="text-gray-500 text-sm leading-relaxed">
                   Resilient asset base and liquidity ratios maintained despite inflationary pressures in the domestic
                   economy.
                 </p>
@@ -127,21 +127,21 @@
               <div class="p-6 bg-surface-container-high rounded-lg">
                 <div class="flex items-center gap-4 mb-4">
                   <div class="h-[1px] flex-grow bg-outline-variant/30"></div>
-                  <span class="text-[10px] font-manrope font-black tracking-widest text-on-surface-variant uppercase">
+                  <span class="text-[black] font-manrope font-black tracking-widest text-black uppercase">
                     Key Performance Indicators
                   </span>
                 </div>
                 <ul class="space-y-4">
                   <li class="flex justify-between items-end">
-                    <span class="text-sm font-manrope text-on-surface-variant">Revenue Growth</span>
+                    <span class="text-sm font-manrope text-gray-500">Revenue Growth</span>
                     <span class="font-manrope font-bold text-[gold]">+12.4%</span>
                   </li>
                   <li class="flex justify-between items-end">
-                    <span class="text-sm font-manrope text-on-surface-variant">Member Compliance</span>
+                    <span class="text-sm font-manrope text-gray-500">Member Compliance</span>
                     <span class="font-manrope font-bold text-[gold]">94%</span>
                   </li>
                   <li class="flex justify-between items-end">
-                    <span class="text-sm font-manrope text-on-surface-variant">Admin Overhead</span>
+                    <span class="text-sm font-manrope text-gray-500">Admin Overhead</span>
                     <span class="font-manrope font-bold text-[gold]">-2.1%</span>
                   </li>
                 </ul>
