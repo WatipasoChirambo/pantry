@@ -3,28 +3,28 @@
 
     <!-- Hero Slide Transition -->
     <transition name="keynote" mode="out-in">
-      <div :key="slide" class="w-full">
+      <div :key="slide" class="w-full overflow-x-hidden">
 
         <!-- Slide 0 – Hero -->
         <div v-if="slide === 0"
-          class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-20 pb-24">
+          class="relative min-h-screen overflow-x-hidden flex flex-col justify-center items-center overflow-hidden pt-20 pb-24">
           <!-- Background Motif -->
           <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
             <div
               class="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary/40 via-transparent to-transparent">
             </div>
-            <img class="w-full h-full object-cover grayscale mix-blend-multiply"
+            <img class="w-screen h-full overflow-x-hidden object-cover grayscale mix-blend-multiply"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbRmZ1Grz4YF1kePuzGdsDZGmUoHwKginvmyXYKhpYDkcBojg-J6Ef7dsZLs0Zal5jMCqHCrgFt6SX2KaUostQSpRTWA7zTq21rJ0u3YYxaGYwIaKX7_Y9WmpEl3SvZf-H2zrIxP1FWN2CfTz8trbK2GgPxuoQtlHvfmm7mvLm7JMMikAL5FfVs4NBk_0dEJd34xg7KymXjWX_OGm-fhf9eRMVix0jLNjOMq3_0QYAW2VPzb7gtQcQ5SHCqi9eqi7xw-CX50f0z_g"
               alt="Abstract classical marble columns" />
           </div>
 
           <!-- Content Canvas -->
-          <div class="relative z-10 w-full max-w-6xl px-8">
+          <div class="relative z-10 w-full md:max-w-6xl px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
               <!-- Left Hero Content -->
               <div class="md:col-span-8 space-y-8">
                 <div class="space-y-4">
-                  <NuxtImg src="/favicon.jpeg" class="h-24 w-24"/>
+                  <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full"/>
                   <div class="flex items-center gap-4">
                     <div class="statute-bar h-12"></div>
                     
@@ -48,7 +48,7 @@
 
                 <div class="flex gap-4 pt-4">
                   <button
-                    class="bg-gradient-to-br from-[black] to-primary-container text-on-primary px-8 py-4 font-label font-bold tracking-widest text-xs rounded-lg hover:shadow-lg transition-all active:scale-95">
+                    class="bg-gradient-to-br from-[black] to-[gold]-container text-on-[gold] px-8 py-4 font-label font-bold tracking-widest text-xs rounded-lg hover:shadow-lg transition-all active:scale-95">
                     COMMENCE PRESENTATION
                   </button>
                 </div>
@@ -73,13 +73,13 @@
         </div>
 
         <!-- Slide 1 – Funds Flow & Surplus -->
-        <div v-else-if="slide === 1" class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div v-else-if="slide === 1" class="grid grid-cols-1 lg:grid-cols-12 gap-12 md:max-w-6xl">
           <!-- Left Column -->
           <div class="lg:col-span-7 flex flex-col gap-12">
             <!-- Surplus Highlight -->
             <div class="bg-surface-container-lowest p-10 statute-bar relative overflow-hidden">
               <div class="absolute top-0 right-0 p-8 opacity-5">
-                <span class="material-symbols-outlined text-9xl">trending_up</span>
+                <Icon name="material-symbols:trending-up" class="text-9xl text-green-900" />
               </div>
               <p class="font-manrope text-xs font-bold uppercase tracking-widest text-black mb-4">
                 Annual Financial Result
@@ -95,8 +95,7 @@
             <!-- Strategic Bullets -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div class="bg-surface-container-low p-8">
-                <span class="material-symbols-outlined text-black mb-4"
-                  style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                <Icon name="material-symbols:verified_user" class="text-black mb-4" />
                 <h4 class="font-notoSerif font-bold text-xl text-[gold] mb-3">Statutory Compliance</h4>
                 <p class="text-gray-500 text-sm leading-relaxed">
                   Fully compliant with <span class="font-bold text-black">section 86(2) of LELPA</span>, ensuring
@@ -104,8 +103,7 @@
                 </p>
               </div>
               <div class="bg-surface-container-low p-8">
-                <span class="material-symbols-outlined text-black mb-4"
-                  style="font-variation-settings: 'FILL' 1;">account_balance</span>
+                <Icon name="material-symbols:account_balance" class="text-black mb-4" />
                 <h4 class="font-notoSerif font-bold text-xl text-[gold] mb-3">Stable Financial Position</h4>
                 <p class="text-gray-500 text-sm leading-relaxed">
                   Resilient asset base and liquidity ratios maintained despite inflationary pressures in the domestic
@@ -151,21 +149,21 @@
         </div>
 
         <!-- Slide 2 – Administrative Expenses / Detailed Layout -->
-        <div v-else-if="slide === 2" class="overflow-scroll md:overflow-hidden">
+        <div v-else-if="slide === 2" class="overflow-scroll md:overflow-hidden md:max-w-6xl p-10">
 
           <!-- Hero / Overview -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-24">
             <div class="lg:col-span-7">
               <div class="statute-bar mb-6">
-                <span class="text-secondary font-label font-extrabold uppercase tracking-[0.2em] text-xs">
+                <span class="text-[gold] font-label font-extrabold uppercase tracking-[0.2em] text-xs">
                   Financial Disclosure 2024
                 </span>
               </div>
               <h2
-                class="font-headline font-black text-5xl md:text-7xl text-primary leading-tight tracking-tighter mb-8">
+                class="font-headline font-black text-5xl md:text-7xl text-black leading-tight tracking-tighter mb-8">
                 Administrative <br />Expenses
               </h2>
-              <p class="text-on-surface-variant text-lg max-w-xl leading-relaxed">
+              <p class="text-gray-400 text-lg max-w-xl leading-relaxed">
                 Fiscal pressure remains elevated due to systemic economic shifts and the expansion of the Society's
                 public interest mandates.
               </p>
@@ -174,23 +172,23 @@
             <div class="lg:col-span-5 bg-surface-container-low p-8 relative">
               <div class="absolute -top-4 -right-4 w-24 h-24 bg-secondary/10 -z-10"></div>
               <div class="space-y-2">
-                <span class="font-label text-xs font-bold uppercase tracking-widest text-outline">Fiscal Year
+                <span class="font-label text-xs text-gray-400 font-bold uppercase tracking-widest text-outline">Fiscal Year
                   Total</span>
                 <div class="flex items-baseline gap-2">
-                  <span class="font-headline text-5xl font-bold text-primary">K715.1</span>
-                  <span class="font-headline text-2xl font-medium text-primary-container">Million</span>
+                  <span class="font-headline text-5xl font-bold text-[gold]">K715.1</span>
+                  <span class="font-headline text-2xl font-medium text-black">Million</span>
                 </div>
-                <div class="flex items-center gap-2 text-error font-bold">
-                  <span class="material-symbols-outlined text-sm">trending_up</span>
+                <div class="flex items-center gap-2 text-success font-bold">
+                  <Icon name="material-symbols:trending-up" class="text-sm text-green-600" />
                   <span>+22.4% Variance</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Primary Expenditure Drivers -->
+          <!-- [gold] Expenditure Drivers -->
           <section class="mb-24">
-            <h3 class="font-headline text-2xl font-bold text-primary mb-12 flex items-center gap-4">
+            <h3 class="font-headline text-2xl font-bold text-black mb-12 flex items-center gap-4">
               Primary Expenditure Drivers
               <div class="h-[1px] flex-grow bg-outline-variant/30"></div>
             </h3>
@@ -199,29 +197,29 @@
               <div
                 class="bg-surface-container-lowest p-6 border-l-2 border-secondary/20 hover:border-secondary transition-colors group">
                 <span class="material-symbols-outlined text-secondary mb-4 block">gavel</span>
-                <h4 class="font-bold text-primary mb-2">Pro bono Scheme</h4>
-                <p class="text-sm text-on-surface-variant">Nationwide launch of the legal aid framework increasing
+                <h4 class="font-bold text-black mb-2">Pro bono Scheme</h4>
+                <p class="text-sm text-gray-600">Nationwide launch of the legal aid framework increasing
                   operational reach.</p>
               </div>
               <div
                 class="bg-surface-container-lowest p-6 border-l-2 border-secondary/20 hover:border-secondary transition-colors group">
                 <span class="material-symbols-outlined text-secondary mb-4 block">groups</span>
-                <h4 class="font-bold text-primary mb-2">Committee Activity</h4>
-                <p class="text-sm text-on-surface-variant">Enhanced regulatory oversight and expanded subcommittee
+                <h4 class="font-bold text-black mb-2">Committee Activity</h4>
+                <p class="text-sm text-gray-600">Enhanced regulatory oversight and expanded subcommittee
                   engagement cycles.</p>
               </div>
               <div
                 class="bg-surface-container-lowest p-6 border-l-2 border-secondary/20 hover:border-secondary transition-colors group">
                 <span class="material-symbols-outlined text-secondary mb-4 block">currency_exchange</span>
-                <h4 class="font-bold text-primary mb-2">MWK Devaluation</h4>
-                <p class="text-sm text-on-surface-variant">Impact of the Malawi Kwacha exchange rate on imported
+                <h4 class="font-bold text-black mb-2">MWK Devaluation</h4>
+                <p class="text-sm text-gray-600">Impact of the Malawi Kwacha exchange rate on imported
                   materials and services.</p>
               </div>
               <div
                 class="bg-surface-container-lowest p-6 border-l-2 border-secondary/20 hover:border-secondary transition-colors group">
                 <span class="material-symbols-outlined text-secondary mb-4 block">payments</span>
-                <h4 class="font-bold text-primary mb-2">General Inflation</h4>
-                <p class="text-sm text-on-surface-variant">Systemic rising costs of utilities, stationery, and
+                <h4 class="font-bold text-black mb-2">General Inflation</h4>
+                <p class="text-sm text-gray-600">Systemic rising costs of utilities, stationery, and
                   logistical fulfillment.</p>
               </div>
             </div>
@@ -230,17 +228,17 @@
           <!-- Detailed Breakdown (Bento Cards) -->
           <section class="mb-32">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-              <div class="lg:col-span-4 bg-primary text-on-primary p-10 flex flex-col justify-between min-h-[400px]">
+              <div class="lg:col-span-4 bg-[gold] text-on-[gold] p-10 flex flex-col justify-between min-h-[400px]">
                 <div>
                   <h3 class="font-headline text-3xl font-bold mb-6">Notable Increases</h3>
-                  <p class="text-on-primary-container leading-relaxed">
+                  <p class="text-on-[gold]-container leading-relaxed">
                     Specific operational areas recorded significant growth in capital deployment to meet statutory
                     obligations.
                   </p>
                 </div>
                 <div class="flex items-center gap-4">
                   <div
-                    class="w-12 h-12 rounded-full border border-on-primary-container flex items-center justify-center">
+                    class="w-12 h-12 rounded-full border border-on-[gold]-container flex items-center justify-center">
                     <span class="material-symbols-outlined">insights</span>
                   </div>
                   <span class="font-label text-xs uppercase tracking-widest font-semibold">Expenditure Analysis</span>
@@ -256,8 +254,8 @@
                     <span class="material-symbols-outlined text-outline">badge</span>
                   </div>
                   <div>
-                    <span class="block font-headline text-4xl font-bold text-primary mt-6">K133.0M</span>
-                    <span class="block text-on-surface-variant font-medium mt-1">Employee Costs</span>
+                    <span class="block font-headline text-4xl font-bold text-[gold] mt-6">K133.0M</span>
+                    <span class="block text-gray-600 font-medium mt-1">Employee Costs</span>
                   </div>
                 </div>
                 <div
@@ -267,8 +265,8 @@
                     <span class="material-symbols-outlined text-outline">event_seat</span>
                   </div>
                   <div>
-                    <span class="block font-headline text-4xl font-bold text-primary mt-6">K129.3M</span>
-                    <span class="block text-on-surface-variant font-medium mt-1">AGM Logistics</span>
+                    <span class="block font-headline text-4xl font-bold text-[gold] mt-6">K129.3M</span>
+                    <span class="block text-gray-600 font-medium mt-1">AGM Logistics</span>
                   </div>
                 </div>
                 <div
@@ -277,11 +275,11 @@
                     <span
                       class="font-label font-bold text-xs uppercase tracking-widest text-secondary block mb-2">Professional
                       Development</span>
-                    <span class="block font-headline text-4xl font-bold text-primary">K101.2M</span>
-                    <span class="block text-on-surface-variant font-medium mt-1">CLE Workshops & Training</span>
+                    <span class="block font-headline text-4xl font-bold text-[gold]">K101.2M</span>
+                    <span class="block text-gray-600 font-medium mt-1">CLE Workshops & Training</span>
                   </div>
-                  <div class="w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center">
-                    <span class="material-symbols-outlined text-primary text-3xl">school</span>
+                  <div class="w-20 h-20 bg-[gold]/5 rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[gold] text-3xl">school</span>
                   </div>
                 </div>
               </div>
@@ -292,13 +290,13 @@
           <section class="relative h-[400px] mb-24 overflow-hidden rounded-sm">
             <img alt="Law Society Office" class="w-full h-full object-cover grayscale contrast-125"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfupFQJI_m--cqBo7P7CBfY4p16vBewClnTQROYDm6EeRqvgymA1lzVrJ2PGi2cORWaWCKn43w8v17AMXVafidrEDBEHsBMK0XNcx1wRqMpZelafMiJnS6tDK5meVK6gds2vH4k79dqJ3x89zgChZjR-tXfMe8XgbReVtG_2iYERIgelVazsauRz19zryyfwAtfmW3sijmGzbB0SnSR1O4XaV1pRlRuVSMGdxQ9omKEgfMtKgGTx3AqLxT0LaMbNxi77rOKemfTmM" />
-            <div class="absolute inset-0 bg-primary/60 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-[gold]/60 mix-blend-multiply"></div>
             <div class="absolute inset-0 flex items-center px-12">
               <div class="max-w-2xl">
                 <h4 class="font-headline text-3xl text-white font-bold mb-4 italic">
                   "Commitment to institutional excellence requires strategic allocation of our collective resources."
                 </h4>
-                <p class="text-on-primary-fixed-variant font-label text-sm uppercase tracking-[0.3em]">MLS Council
+                <p class="text-on-[gold]-fixed-variant font-label text-sm uppercase tracking-[0.3em]">MLS Council
                   Statement</p>
               </div>
             </div>
@@ -308,25 +306,25 @@
 
         <!-- Slide 3 – Financial Position -->
         <div v-else-if="slide === 3" class="px-8 py-12 bg-surface text-on-surface font-body">
-          <h1 class="text-5xl md:text-6xl font-black font-headline text-primary mb-6">FINANCIAL POSITION</h1>
+          <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-6">FINANCIAL POSITION</h1>
 
-          <p class="text-lg md:text-xl leading-relaxed text-on-surface-variant mb-4">
+          <p class="text-lg md:text-xl leading-relaxed text-gray-600 mb-4">
             Excellent liquidity: Acid test ratio 26.5 (2022: 23.8)<br>
             Current assets: K408.5M (2022: K245.0M)<br>
             Current liabilities: K15.4M (2022: K10.3M)<br>
             Gearing ratio: 0 (no borrowing)
           </p>
 
-          <p class="text-lg md:text-xl leading-relaxed text-on-surface-variant">
+          <p class="text-lg md:text-xl leading-relaxed text-gray-600">
             Non-current assets increased from K206.8M to K437.0M, mainly due to land revaluation.
           </p>
         </div>
 
         <!-- Slide 4 – Fidelity Fund -->
         <div v-else-if="slide === 4" class="px-8 py-12 bg-surface text-on-surface font-body">
-          <h1 class="text-5xl md:text-6xl font-black font-headline text-primary mb-6">FIDELITY FUND</h1>
+          <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-6">FIDELITY FUND</h1>
 
-          <p class="text-lg md:text-xl leading-relaxed text-on-surface-variant">
+          <p class="text-lg md:text-xl leading-relaxed text-gray-600">
             Contributions: K23.4M (2022: K36.6M)<br>
             Investments: K152.7M generating K22.5M income<br>
             Total fund: K196M<br>
@@ -336,9 +334,9 @@
 
         <!-- Slide 5 – 2024 Outlook -->
         <div v-else-if="slide === 5" class="px-8 py-12 bg-surface text-on-surface font-body">
-          <h1 class="text-5xl md:text-6xl font-black font-headline text-primary mb-6">2024 OUTLOOK</h1>
+          <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-6">2024 OUTLOOK</h1>
 
-          <div class="space-y-6 text-lg md:text-xl leading-relaxed text-on-surface-variant">
+          <div class="space-y-6 text-lg md:text-xl leading-relaxed text-gray-600">
             <p>
               <strong>Income:</strong> For 2024, income is likely to increase due to anticipated growth in membership, a
               proposed increase in membership fees, higher CLE workshop attendance, expected increased levy remittance

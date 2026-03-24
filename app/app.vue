@@ -26,7 +26,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="bg-white max-w-7xl mx-auto min-h-screen">
+  <div class="bg-white w-full overflow-x-hidden md:overflow-x-hidden in-h-screen">
 <NuxtPage />
   </div>
     
