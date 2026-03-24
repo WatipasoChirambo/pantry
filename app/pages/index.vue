@@ -24,8 +24,10 @@
               <!-- Left Hero Content -->
               <div class="md:col-span-8 space-y-8">
                 <div class="space-y-4">
+                  <NuxtImg src="/favicon.jpeg" class="h-24 w-24"/>
                   <div class="flex items-center gap-4">
                     <div class="statute-bar h-12"></div>
+                    
                     <span class="font-label text-black font-bold tracking-[0.2em] text-sm uppercase">
                       Annual Financial Review
                     </span>
@@ -48,10 +50,6 @@
                   <button
                     class="bg-gradient-to-br from-[black] to-primary-container text-on-primary px-8 py-4 font-label font-bold tracking-widest text-xs rounded-lg hover:shadow-lg transition-all active:scale-95">
                     COMMENCE PRESENTATION
-                  </button>
-                  <button
-                    class="text-secondary font-label font-bold tracking-widest text-xs px-8 py-4 border-b-2 border-transparent hover:border-secondary transition-all">
-                    VIEW FULL AUDIT
                   </button>
                 </div>
               </div>
