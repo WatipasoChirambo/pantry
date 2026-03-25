@@ -365,11 +365,11 @@
     <!-- Side Buttons -->
     <button @click="prevSlide"
       class="fixed left-4 bottom-5 -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/80 px-6 py-4 rounded-full text-black shadow-2xl text-2xl transition-all">
-      ‹
+      ‹ Previous
     </button>
     <button @click="nextSlide"
       class="fixed right-4 bottom-5 -translate-y-1/2 bg-yellow-500 hover:bg-yellow-400 px-6 py-4 rounded-full text-black shadow-2xl text-2xl transition-all">
-      ›
+      Next ›
     </button>
 
   </div>
