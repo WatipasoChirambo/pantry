@@ -27,18 +27,19 @@
                   <div class="flex items-center gap-4">
                     <div class="statute-bar h-12"></div>
 
-                    <span class="font-label text-black font-bold tracking-[0.2em] text-sm uppercase">
-                      Annual Financial Review
-                    </span>
+
                   </div>
-                  <h2 class="font-headline text-[gold] text-6xl md:text-8xl font-black tracking-tighter leading-tight">
+                  <span class="font-label text-[gold] font-bold tracking-[0.2em] uppercase">
+                    Annual Financial Review
+                  </span>
+                  <h2 class="font-headline text-black text-6xl md:text-8xl font-black tracking-tighter leading-tight">
                     Treasurer's<br />Report 2024
                   </h2>
                 </div>
 
                 <div class="bg-surface-container-lowest p-8 border-l-8 border-[gold] shadow-sm max-w-2xl">
-                  <p class="font-headline text-2xl text-gray-700 font-bold italic mb-2">
-                    Presented by Kizito Kumwenda, Treasurer
+                  <p class="text-xl font-bold italic mb-2 text-gray-600">
+                    Presented by <span class="text-[gold]">Kizito Kumwenda</span>, Treasurer
                   </p>
                   <p class="font-body text-outline font-medium tracking-wide text-gray-400">
                     13 Months Period Ended 31st January 2025
@@ -237,8 +238,7 @@
         </div>
 
         <!-- Slide 3 – Financial Position -->
-        <div v-else-if="slide === 3" class="px-8 py-12 bg-surface text-on-surface font-body">
-          <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4" />
+        <div v-else-if="slide === 3" class="px-8 py-12 bg-surface text-on-surface font-body h-full">
           <div>
             <FinancialPosition />
           </div>
@@ -247,26 +247,26 @@
         <!-- Slide 4 – Fidelity Fund -->
         <div v-else-if="slide === 4" class="px-8 py-12 bg-surface text-on-surface font-body">
           <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4" />
-            <Funds />
+          <Funds />
         </div>
 
         <!-- Slide 5 – 2024 Outlook -->
         <div v-else-if="slide === 5" class="px-8 py-12 bg-surface text-on-surface font-body">
           <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-2">2024 OUTLOOK</h1>
 
-          <Outlook/>
+          <Outlook />
         </div>
       </div>
     </transition>
 
     <!-- Side Buttons -->
     <button @click="prevSlide"
-      class="fixed left-4 bottom-5 -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/80 px-6 py-4 rounded-full text-black shadow-2xl text-sm md:text-2xl transition-all">
-      ‹ <span>Previous</span>
+      class="fixed left-4 bottom-5 -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/80 px-6 py-2 rounded-full text-black shadow-2xl text-sm md:text-2xl transition-all">
+      ‹Previous
     </button>
     <button @click="nextSlide"
-      class="fixed right-4 bottom-5 -translate-y-1/2 bg-yellow-500 hover:bg-yellow-400 px-6 py-4 rounded-full text-black shadow-2xl md:text-2xl transition-all">
-      <span>Next</span> ›
+      class="fixed right-4 bottom-5 -translate-y-1/2 bg-yellow-500 hover:bg-yellow-400 px-6 py-2 rounded-full text-black shadow-2xl md:text-2xl transition-all">
+      Next›
     </button>
 
   </div>

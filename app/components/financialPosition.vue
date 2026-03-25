@@ -1,6 +1,7 @@
 <template>
-    <div class="px-8 py-12 bg-surface text-on-surface">
-        <div>
+    <div class="px-8 py-12 bg-surface text-on-surface block gap-4 md:flex justify-between md:gap-8">
+        <div class="block ">
+            <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4" />
             <h1 class="text-5xl md:text-6xl font-black text-[gold] mb-6">
                 FINANCIAL POSITION
             </h1>
@@ -12,7 +13,8 @@
             </p>
         </div>
         <!-- Chart -->
-         <div class="mt-6 w-[18em]">
+         <div class="mt-6 w-full flex justify-center h-[70vh] md:h-[70vh]">
+            
             <Bar :data="chartData" :options="chartOptions" />
          </div>
 
