@@ -77,7 +77,7 @@
           <!-- Left Column -->
           <div class="lg:col-span-7 block md:flex flex-col gap-8">
             <!-- Surplus Highlight -->
-            <div class="p-10 statute-bar relative overflow-hidden">
+            <div class="p-10 statute-bar relative">
               <div class="absolute top-0 right-0 p-8 opacity-5">
                 <Icon name="material-symbols:trending-up" class="text-9xl text-green-500" />
               </div>
