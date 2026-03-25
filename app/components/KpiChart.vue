@@ -8,7 +8,9 @@
         </div>
 
         <!-- Chart -->
-        <Bar :data="chartData" :options="chartOptions" />
+         <div class="mt-6 w-[18em]">
+            <Bar :data="chartData" :options="chartOptions" />
+         </div>
     </div>
 </template>
 

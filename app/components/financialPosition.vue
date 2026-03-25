@@ -12,7 +12,9 @@
             </p>
         </div>
         <!-- Chart -->
-        <Bar :data="chartData" :options="chartOptions" />
+         <div class="mt-6 w-[18em]">
+            <Bar :data="chartData" :options="chartOptions" />
+         </div>
 
         <!-- Ratios / Highlights -->
         <!-- <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">

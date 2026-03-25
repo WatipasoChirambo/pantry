@@ -246,31 +246,15 @@
 
         <!-- Slide 4 – Fidelity Fund -->
         <div v-else-if="slide === 4" class="px-8 py-12 bg-surface text-on-surface font-body">
-          
+          <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4" />
             <Funds />
         </div>
 
         <!-- Slide 5 – 2024 Outlook -->
         <div v-else-if="slide === 5" class="px-8 py-12 bg-surface text-on-surface font-body">
-          <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-6">2024 OUTLOOK</h1>
+          <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-2">2024 OUTLOOK</h1>
 
-          <div class="space-y-6 text-lg md:text-xl leading-relaxed text-gray-600">
-            <p>
-              <strong>Income:</strong> For 2024, income is likely to increase due to anticipated growth in membership, a
-              proposed increase in membership fees, higher CLE workshop attendance, expected increased levy remittance
-              from members, and improved levy recovery measures planned by the Society. We also anticipate more donor
-              funding on major public interest projects undertaken by the Society.
-            </p>
-            <p>
-              <strong>Expenses:</strong> Expenses in 2024 are expected to rise due to increased operations, higher cost
-              of goods and services, staff costs, and capital expenditure (including expected expenses by the Land
-              Development Committee and the purchase of the CEO’s motor vehicle). General expenses are also likely to
-              increase due to inflationary pressures and overall price increases in commodities and services.
-            </p>
-            <p>
-              I would like to sincerely appreciate the support you render to my office and the timely payments you make.
-            </p>
-          </div>
+          <Outlook/>
         </div>
       </div>
     </transition>
@@ -296,6 +280,7 @@ import StatCards from '~/components/statCard.vue'
 import DoughnutChart from '~/components/doughnut.vue'
 import FinancialPosition from '~/components/financialPosition.vue'
 import Funds from '~/components/funds.vue'
+import Outlook from '~/components/outlook.vue'
 
 const data = [
   {
