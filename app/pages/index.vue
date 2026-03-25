@@ -73,7 +73,7 @@
         </div>
 
         <!-- Slide 1 – Funds Flow & Surplus -->
-        <div v-else-if="slide === 1" class="overflow-y-scroll grid grid-cols-1 lg:grid-cols-12 gap-12 md:max-w-6xl mx-auto">
+        <div v-else-if="slide === 1" class="grid grid-cols-1 lg:grid-cols-12 gap-12 md:max-w-6xl mx-auto">
           <!-- Left Column -->
           <div class="lg:col-span-7 block md:flex flex-col gap-8">
             <!-- Surplus Highlight -->
