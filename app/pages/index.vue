@@ -4,7 +4,6 @@
     <!-- Hero Slide Transition -->
     <transition name="keynote" mode="out-in">
       <div :key="slide" class="w-full overflow-x-hidden">
-
         <!-- Slide 0 – Hero -->
         <div v-if="slide === 0"
           class="relative min-h-screen overflow-x-hidden flex flex-col justify-center items-center overflow-hidden pt-20 pb-24">
@@ -73,14 +72,15 @@
         </div>
 
         <!-- Slide 1 – Funds Flow & Surplus -->
-        <div v-else-if="slide === 1" class="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-12 md:max-w-6xl mx-auto">
+        <div v-else-if="slide === 1" class="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 md:max-w-6xl mx-auto p-4">
           <!-- Left Column -->
-          <div class="lg:col-span-7 block md:flex flex-col md:gap-8">
+          <div class="lg:col-span-7 block md:flex flex-col md:gap-4">
             <!-- Surplus Highlight -->
             <div class="p-10 statute-bar relative">
               <div class="absolute top-0 right-0 p-8 opacity-5">
-                <Icon name="material-symbols:trending-up" class="text-9xl text-green-500" />
+                <Icon name="material-symbols:trending-up" class="text-9xl text-green-700" />
               </div>
+              <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full my-4" />
               <p class="font-manrope text-xs font-bold uppercase tracking-widest text-black mb-4">
                 Annual Financial Result
               </p>
@@ -116,33 +116,15 @@
           <!-- Right Sidebar -->
           <div class="lg:col-span-5">
             <div class="sticky top-32 space-y-8">
-              <!-- Chart -->
-              <div class="chart-container">
-                <canvas ref="barChart"></canvas>
-              </div>
-
               <!-- KPIs -->
-              <div class="p-6 bg-surface-container-high rounded-lg">
+              <div class="p-b px-6 bg-surface-container-high rounded-lg">
                 <div class="flex items-center gap-4 mb-4">
                   <div class="h-[1px] flex-grow bg-outline-variant/30"></div>
-                  <span class="text-[black] font-manrope font-black tracking-widest text-black uppercase">
+                  <!-- <span class="text-[black] font-manrope font-black tracking-widest text-black uppercase">
                     Key Performance Indicators
-                  </span>
+                  </span> -->
                 </div>
-                <ul class="space-y-4">
-                  <li class="flex justify-between items-end">
-                    <span class="text-sm font-manrope text-gray-500">Revenue Growth</span>
-                    <span class="font-manrope font-bold text-[gold]">+12.4%</span>
-                  </li>
-                  <li class="flex justify-between items-end">
-                    <span class="text-sm font-manrope text-gray-500">Member Compliance</span>
-                    <span class="font-manrope font-bold text-[gold]">94%</span>
-                  </li>
-                  <li class="flex justify-between items-end">
-                    <span class="text-sm font-manrope text-gray-500">Admin Overhead</span>
-                    <span class="font-manrope font-bold text-[gold]">-2.1%</span>
-                  </li>
-                </ul>
+                <KpiChart />
               </div>
             </div>
           </div>
@@ -154,6 +136,7 @@
           <!-- Hero / Overview -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-24">
             <div class="lg:col-span-7">
+              <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mb-4" />
               <div class="statute-bar mb-6">
                 <span class="text-[gold] font-label font-extrabold uppercase tracking-[0.2em] text-xs">
                   Financial Disclosure 2024
@@ -167,23 +150,7 @@
                 public interest mandates.
               </p>
             </div>
-
-            <div class="lg:col-span-5 bg-surface-container-low p-8 relative">
-              <div class="absolute -top-4 -right-4 w-24 h-24 bg-secondary/10 -z-10"></div>
-              <div class="space-y-2">
-                <span class="font-label text-xs text-gray-400 font-bold uppercase tracking-widest text-outline">Fiscal
-                  Year
-                  Total</span>
-                <div class="flex items-baseline gap-2">
-                  <span class="font-headline text-5xl font-bold text-[gold]">K715.1</span>
-                  <span class="font-headline text-2xl font-medium text-black">Million</span>
-                </div>
-                <div class="flex items-center gap-2 text-success font-bold">
-                  <Icon name="material-symbols:trending-up" class="text-sm text-green-600" />
-                  <span>+22.4% Variance</span>
-                </div>
-              </div>
-            </div>
+            <DoughnutChart />
           </div>
 
           <!-- [gold] Expenditure Drivers -->
@@ -227,7 +194,7 @@
 
           <!-- Detailed Breakdown (Bento Cards) -->
           <section class="mb-32">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
               <div class="lg:col-span-4 bg-[gold] text-on-[gold] p-10 flex flex-col justify-between min-h-[400px]">
                 <div>
                   <h3 class="font-headline text-3xl text-black font-bold mb-6">Notable Increases</h3>
@@ -246,44 +213,7 @@
               </div>
 
               <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Stat Cards -->
-                <div
-                  class="bg-surface-container-high p-8 flex flex-col justify-between hover:bg-surface-container-highest transition-all">
-                  <div class="flex justify-between items-start">
-                    <span class="font-label font-bold text-xs uppercase tracking-widest text-black">Personnel</span>
-                    <Icon name="material-symbols:badge" class="text-outline text-2xl text-black" />
-                  </div>
-                  <div>
-                    <span class="block font-headline text-4xl font-bold text-[gold] mt-6">K133.0M</span>
-                    <span class="block text-gray-600 font-medium mt-1">Employee Costs</span>
-                  </div>
-                </div>
-                <div
-                  class="bg-surface-container-high p-8 flex flex-col justify-between hover:bg-surface-container-highest transition-all">
-                  <div class="flex justify-between items-start">
-                    <span class="font-label font-bold text-xs uppercase tracking-widest text-black">Events</span>
-                    <UBadge color="neutral" variant="soft">
-                      <Icon name="material-symbols:event-seat" class="text-outline text-sm" />
-                    </UBadge>
-                  </div>
-                  <div>
-                    <span class="block font-headline text-4xl font-bold text-[gold] mt-6">K129.3M</span>
-                    <span class="block text-gray-600 font-medium mt-1">AGM Logistics</span>
-                  </div>
-                </div>
-                <div
-                  class="md:col-span-2 bg-surface-container-high p-8 flex items-center justify-between hover:bg-surface-container-highest transition-all">
-                  <div>
-                    <span
-                      class="font-label font-bold text-xs uppercase tracking-widest text-black block mb-2">Professional
-                      Development</span>
-                    <span class="block font-headline text-4xl font-bold text-[gold]">K101.2M</span>
-                    <span class="block text-gray-600 font-medium mt-1">CLE Workshops & Training</span>
-                  </div>
-                  <div class="w-20 h-20 bg-[gold]/5 rounded-full flex items-center justify-center">
-                    <Icon name="material-symbols:school" class="text-[gold] text-3xl" />
-                  </div>
-                </div>
+                <StatCards :cards="data" />
               </div>
             </div>
           </section>
@@ -308,30 +238,16 @@
 
         <!-- Slide 3 – Financial Position -->
         <div v-else-if="slide === 3" class="px-8 py-12 bg-surface text-on-surface font-body">
-          <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-6">FINANCIAL POSITION</h1>
-
-          <p class="text-lg md:text-xl leading-relaxed text-gray-600 mb-4">
-            Excellent liquidity: Acid test ratio 26.5 (2022: 23.8)<br>
-            Current assets: K408.5M (2022: K245.0M)<br>
-            Current liabilities: K15.4M (2022: K10.3M)<br>
-            Gearing ratio: 0 (no borrowing)
-          </p>
-
-          <p class="text-lg md:text-xl leading-relaxed text-gray-600">
-            Non-current assets increased from K206.8M to K437.0M, mainly due to land revaluation.
-          </p>
+          <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4" />
+          <div>
+            <FinancialPosition />
+          </div>
         </div>
 
         <!-- Slide 4 – Fidelity Fund -->
         <div v-else-if="slide === 4" class="px-8 py-12 bg-surface text-on-surface font-body">
-          <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-6">FIDELITY FUND</h1>
-
-          <p class="text-lg md:text-xl leading-relaxed text-gray-600">
-            Contributions: K23.4M (2022: K36.6M)<br>
-            Investments: K152.7M generating K22.5M income<br>
-            Total fund: K196M<br>
-            Loan repayment: K100M (building project)
-          </p>
+          
+            <Funds />
         </div>
 
         <!-- Slide 5 – 2024 Outlook -->
@@ -345,20 +261,17 @@
               from members, and improved levy recovery measures planned by the Society. We also anticipate more donor
               funding on major public interest projects undertaken by the Society.
             </p>
-
             <p>
               <strong>Expenses:</strong> Expenses in 2024 are expected to rise due to increased operations, higher cost
               of goods and services, staff costs, and capital expenditure (including expected expenses by the Land
               Development Committee and the purchase of the CEO’s motor vehicle). General expenses are also likely to
               increase due to inflationary pressures and overall price increases in commodities and services.
             </p>
-
             <p>
               I would like to sincerely appreciate the support you render to my office and the timely payments you make.
             </p>
           </div>
         </div>
-
       </div>
     </transition>
 
@@ -378,6 +291,32 @@
 <script setup>
 import { ref, onMounted, watch, nextTick } from 'vue'
 import Chart from 'chart.js/auto'
+import KpiChart from '~/components/KpiChart.vue'
+import StatCards from '~/components/statCard.vue'
+import DoughnutChart from '~/components/doughnut.vue'
+import FinancialPosition from '~/components/financialPosition.vue'
+import Funds from '~/components/funds.vue'
+
+const data = [
+  {
+    title: 'Personnel',
+    value: 'K133.0M',
+    subtitle: 'Employee Costs',
+    icon: 'material-symbols:badge'
+  },
+  {
+    title: 'Events',
+    value: 'K129.3M',
+    subtitle: 'AGM Logistics',
+    icon: 'material-symbols:event-seat'
+  },
+  {
+    title: 'Professional Development',
+    value: 'K101.2M',
+    subtitle: 'CLE Workshops & Training',
+    icon: 'material-symbols:school'
+  }
+]
 
 // ------------------------
 // Slide Control
