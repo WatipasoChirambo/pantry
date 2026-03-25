@@ -73,9 +73,9 @@
         </div>
 
         <!-- Slide 1 – Funds Flow & Surplus -->
-        <div v-else-if="slide === 1" class="grid grid-cols-1 lg:grid-cols-12 gap-12 md:max-w-6xl mx-auto">
+        <div v-else-if="slide === 1" class="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-12 md:max-w-6xl mx-auto">
           <!-- Left Column -->
-          <div class="lg:col-span-7 block md:flex flex-col gap-8">
+          <div class="lg:col-span-7 block md:flex flex-col md:gap-8">
             <!-- Surplus Highlight -->
             <div class="p-10 statute-bar relative">
               <div class="absolute top-0 right-0 p-8 opacity-5">
@@ -93,7 +93,7 @@
             </div>
 
             <!-- Strategic Bullets -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-4">
               <div class="bg-surface-container-low p-8">
                 <Icon name="material-symbols:verified_user" class="text-black mb-4" />
                 <h4 class="font-notoSerif font-bold text-xl text-[gold] mb-3">Statutory Compliance</h4>
