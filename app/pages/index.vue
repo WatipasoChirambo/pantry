@@ -24,10 +24,10 @@
               <!-- Left Hero Content -->
               <div class="md:col-span-8 space-y-8">
                 <div class="space-y-4">
-                  <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full"/>
+                  <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full" />
                   <div class="flex items-center gap-4">
                     <div class="statute-bar h-12"></div>
-                    
+
                     <span class="font-label text-black font-bold tracking-[0.2em] text-sm uppercase">
                       Annual Financial Review
                     </span>
@@ -47,8 +47,7 @@
                 </div>
 
                 <div class="flex gap-4 pt-4">
-                  <button
-                  @click="goToSlide"
+                  <button @click="goToSlide"
                     class="bg-gradient-to-br from-[black] to-[gold]-container text-on-[gold] px-8 py-4 font-label font-bold tracking-widest text-xs rounded-lg hover:shadow-lg transition-all active:scale-95">
                     COMMENCE PRESENTATION
                   </button>
@@ -74,13 +73,13 @@
         </div>
 
         <!-- Slide 1 – Funds Flow & Surplus -->
-        <div v-else-if="slide === 1" class="grid grid-cols-1 lg:grid-cols-12 gap-12 md:max-w-6xl">
+        <div v-else-if="slide === 1" class="overflow-y-scroll grid grid-cols-1 lg:grid-cols-12 gap-12 md:max-w-6xl mx-auto">
           <!-- Left Column -->
-          <div class="lg:col-span-7 flex flex-col gap-12">
+          <div class="lg:col-span-7 block md:flex flex-col gap-8">
             <!-- Surplus Highlight -->
-            <div class="bg-surface-container-lowest p-10 statute-bar relative overflow-hidden">
+            <div class="p-10 statute-bar relative overflow-hidden">
               <div class="absolute top-0 right-0 p-8 opacity-5">
-                <Icon name="material-symbols:trending-up" class="text-9xl text-green-900" />
+                <Icon name="material-symbols:trending-up" class="text-9xl text-green-500" />
               </div>
               <p class="font-manrope text-xs font-bold uppercase tracking-widest text-black mb-4">
                 Annual Financial Result
@@ -150,7 +149,7 @@
         </div>
 
         <!-- Slide 2 – Administrative Expenses / Detailed Layout -->
-        <div v-else-if="slide === 2" class="overflow-scroll md:overflow-hidden md:max-w-6xl p-10">
+        <div v-else-if="slide === 2" class="overflow-scroll md:overflow-hidden md:max-w-6xl mx-auto p-10">
 
           <!-- Hero / Overview -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-24">
@@ -160,8 +159,7 @@
                   Financial Disclosure 2024
                 </span>
               </div>
-              <h2
-                class="font-headline font-black text-5xl md:text-7xl text-black leading-tight tracking-tighter mb-8">
+              <h2 class="font-headline font-black text-5xl md:text-7xl text-black leading-tight tracking-tighter mb-8">
                 Administrative <br />Expenses
               </h2>
               <p class="text-gray-400 text-lg max-w-xl leading-relaxed">
@@ -173,7 +171,8 @@
             <div class="lg:col-span-5 bg-surface-container-low p-8 relative">
               <div class="absolute -top-4 -right-4 w-24 h-24 bg-secondary/10 -z-10"></div>
               <div class="space-y-2">
-                <span class="font-label text-xs text-gray-400 font-bold uppercase tracking-widest text-outline">Fiscal Year
+                <span class="font-label text-xs text-gray-400 font-bold uppercase tracking-widest text-outline">Fiscal
+                  Year
                   Total</span>
                 <div class="flex items-baseline gap-2">
                   <span class="font-headline text-5xl font-bold text-[gold]">K715.1</span>
@@ -197,28 +196,28 @@
               <!-- Driver Cards -->
               <div
                 class="bg-surface-container-lowest p-6 border-l-2 border-secondary/20 hover:border-secondary transition-colors group">
-                <span class="material-symbols-outlined text-secondary mb-4 block">gavel</span>
+                <Icon name="material-symbols:gavel" class="text-[gold] mb-4 block text-3xl" />
                 <h4 class="font-bold text-black mb-2">Pro bono Scheme</h4>
                 <p class="text-sm text-gray-600">Nationwide launch of the legal aid framework increasing
                   operational reach.</p>
               </div>
               <div
                 class="bg-surface-container-lowest p-6 border-l-2 border-secondary/20 hover:border-secondary transition-colors group">
-                <span class="material-symbols-outlined text-secondary mb-4 block">groups</span>
+                <Icon name="material-symbols:groups" class="text-[gold] mb-4 block text-3xl" />
                 <h4 class="font-bold text-black mb-2">Committee Activity</h4>
                 <p class="text-sm text-gray-600">Enhanced regulatory oversight and expanded subcommittee
                   engagement cycles.</p>
               </div>
               <div
                 class="bg-surface-container-lowest p-6 border-l-2 border-secondary/20 hover:border-secondary transition-colors group">
-                <span class="material-symbols-outlined text-secondary mb-4 block">currency_exchange</span>
+                <Icon name="material-symbols:arrow-upward" class="text-[gold] mb-4 block text-3xl" />
                 <h4 class="font-bold text-black mb-2">MWK Devaluation</h4>
                 <p class="text-sm text-gray-600">Impact of the Malawi Kwacha exchange rate on imported
                   materials and services.</p>
               </div>
               <div
                 class="bg-surface-container-lowest p-6 border-l-2 border-secondary/20 hover:border-secondary transition-colors group">
-                <span class="material-symbols-outlined text-secondary mb-4 block">payments</span>
+                <Icon name="material-symbols:payments" class="text-[gold] mb-4 block text-3xl" />
                 <h4 class="font-bold text-black mb-2">General Inflation</h4>
                 <p class="text-sm text-gray-600">Systemic rising costs of utilities, stationery, and
                   logistical fulfillment.</p>
@@ -231,18 +230,18 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
               <div class="lg:col-span-4 bg-[gold] text-on-[gold] p-10 flex flex-col justify-between min-h-[400px]">
                 <div>
-                  <h3 class="font-headline text-3xl font-bold mb-6">Notable Increases</h3>
-                  <p class="text-on-[gold]-container leading-relaxed">
+                  <h3 class="font-headline text-3xl text-black font-bold mb-6">Notable Increases</h3>
+                  <p class="text-on-[gold]-container leading-relaxed text-black">
                     Specific operational areas recorded significant growth in capital deployment to meet statutory
                     obligations.
                   </p>
                 </div>
                 <div class="flex items-center gap-4">
-                  <div
-                    class="w-12 h-12 rounded-full border border-on-[gold]-container flex items-center justify-center">
-                    <span class="material-symbols-outlined">insights</span>
+                  <div class="w-12 h-12 rounded-full border border-yellow-500/40 flex items-center justify-center">
+                    <Icon name="material-symbols:insights" class="text-yellow-600 text-xl" />
                   </div>
-                  <span class="font-label text-xs uppercase tracking-widest font-semibold">Expenditure Analysis</span>
+                  <span class="font-label text-xs uppercase tracking-widest font-semibold text-black">Expenditure
+                    Analysis</span>
                 </div>
               </div>
 
@@ -251,8 +250,8 @@
                 <div
                   class="bg-surface-container-high p-8 flex flex-col justify-between hover:bg-surface-container-highest transition-all">
                   <div class="flex justify-between items-start">
-                    <span class="font-label font-bold text-xs uppercase tracking-widest text-secondary">Personnel</span>
-                    <span class="material-symbols-outlined text-outline">badge</span>
+                    <span class="font-label font-bold text-xs uppercase tracking-widest text-black">Personnel</span>
+                    <Icon name="material-symbols:badge" class="text-outline text-2xl text-black" />
                   </div>
                   <div>
                     <span class="block font-headline text-4xl font-bold text-[gold] mt-6">K133.0M</span>
@@ -262,8 +261,10 @@
                 <div
                   class="bg-surface-container-high p-8 flex flex-col justify-between hover:bg-surface-container-highest transition-all">
                   <div class="flex justify-between items-start">
-                    <span class="font-label font-bold text-xs uppercase tracking-widest text-secondary">Events</span>
-                    <span class="material-symbols-outlined text-outline">event_seat</span>
+                    <span class="font-label font-bold text-xs uppercase tracking-widest text-black">Events</span>
+                    <UBadge color="neutral" variant="soft">
+                      <Icon name="material-symbols:event-seat" class="text-outline text-sm" />
+                    </UBadge>
                   </div>
                   <div>
                     <span class="block font-headline text-4xl font-bold text-[gold] mt-6">K129.3M</span>
@@ -274,13 +275,13 @@
                   class="md:col-span-2 bg-surface-container-high p-8 flex items-center justify-between hover:bg-surface-container-highest transition-all">
                   <div>
                     <span
-                      class="font-label font-bold text-xs uppercase tracking-widest text-secondary block mb-2">Professional
+                      class="font-label font-bold text-xs uppercase tracking-widest text-black block mb-2">Professional
                       Development</span>
                     <span class="block font-headline text-4xl font-bold text-[gold]">K101.2M</span>
                     <span class="block text-gray-600 font-medium mt-1">CLE Workshops & Training</span>
                   </div>
                   <div class="w-20 h-20 bg-[gold]/5 rounded-full flex items-center justify-center">
-                    <span class="material-symbols-outlined text-[gold] text-3xl">school</span>
+                    <Icon name="material-symbols:school" class="text-[gold] text-3xl" />
                   </div>
                 </div>
               </div>
