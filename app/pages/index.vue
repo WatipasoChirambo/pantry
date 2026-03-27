@@ -38,17 +38,17 @@
                 </div>
 
                 <div class="bg-surface-container-lowest p-8 border-l-8 border-[gold] shadow-sm max-w-2xl">
-                  <p class="text-xl font-bold italic mb-2 text-gray-600">
+                  <p class="md:text-xl font-bold italic mb-2 text-gray-600 text-sm">
                     Presented by <span class="text-[gold]">Kizito Kumwenda</span>, Treasurer
                   </p>
-                  <p class="font-body text-outline font-medium tracking-wide text-gray-400">
+                  <p class="font-body text-outline font-medium tracking-wide text-gray-400 text-sm md:text-base">
                     13 Months Period Ended 31st January 2025
                   </p>
                 </div>
 
                 <div class="flex gap-4 pt-4">
                   <button @click="goToSlide"
-                    class="bg-gradient-to-br from-[black] to-[gold]-container text-on-[gold] px-8 py-4 font-label font-bold tracking-widest text-xs rounded-lg hover:shadow-lg transition-all active:scale-95">
+                    class="bg-[gold] text-black px-8 py-4 font-label font-bold tracking-widest text-xs rounded-lg hover:shadow-lg transition-all active:scale-95">
                     COMMENCE PRESENTATION
                   </button>
                 </div>
@@ -275,7 +275,7 @@
       class="fixed left-4 bottom-5 -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/80 px-6 py-2 rounded-full text-black shadow-2xl text-sm transition-all">
       ‹Previous
     </button>
-    <button v-if="slide < totalSlides - 1" @click="nextSlide"
+    <button v-if="slide > 0 && totalSlides - 1" @click="nextSlide"
       class="fixed right-4 bottom-5 -translate-y-1/2 bg-yellow-500 hover:bg-yellow-400 px-6 py-2 rounded-full text-black shadow-2xl transition-all">
       Next›
     </button>
