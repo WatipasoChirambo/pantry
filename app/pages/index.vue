@@ -74,7 +74,7 @@
 
         <!-- Slide 1 – Funds Flow & Surplus -->
         <div v-else-if="slide === 1"
-          class="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 md:max-w-6xl mx-auto p-4 overflow-hidden">
+          class="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 md:max-w-7xl mx-auto p-4 overflow-hidden">
           <!-- Left Column -->
           <div class="lg:col-span-7 block md:flex flex-col md:gap-4">
             <!-- Surplus Highlight -->
@@ -140,7 +140,7 @@
         </div>
 
         <!-- Slide 2 – Administrative Expenses / Detailed Layout -->
-        <div v-else-if="slide === 2" class="overflow-scroll md:overflow-hidden md:max-w-6xl mx-auto p-10">
+        <div v-else-if="slide === 2" class="overflow-scroll md:overflow-hidden md:max-w-7xl mx-auto p-10">
 
           <!-- Hero / Overview -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-24">
@@ -246,7 +246,7 @@
         </div>
 
         <!-- Slide 4 – Fidelity Fund -->
-        <div v-else-if="slide === 3" class="px-8 py-12 bg-surface text-on-surface font-body h-full md:max-w-6xl mx-auto p-10">
+        <div v-else-if="slide === 3" class="py-12 bg-surface text-on-surface font-body h-full md:max-w-7xl mx-auto p-10">
           <div  class="px-8 py-12 bg-surface text-on-surface font-body">
           <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4" />
           <Funds />
@@ -256,7 +256,7 @@
         
 
         <!-- Slide 5 – 2024 Outlook -->
-        <div v-else-if="slide === 4" class="px-8 py-12 bg-surface text-on-surface font-body md:max-w-6xl mx-auto p-10">
+        <div v-else-if="slide === 4" class="px-8 py-12 bg-surface text-on-surface font-body md:max-w-7xl mx-auto p-10">
           <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4 mb-4" />
           <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-2">2024 OUTLOOK</h1>
           <Outlook />
@@ -264,7 +264,7 @@
 
 
          <div v-else-if="slide === 5" class="px-8 py-12 bg-surface text-on-surface font-body">
-          <h2 class="flex items-center justify-center h-screen w-full text-6xl text-black font-bold">THANK YOU!</h2>
+          <h2 class="flex items-center justify-center h-screen w-full text-4xl md:text-6xl text-black font-bold">THANK YOU!</h2>
         </div>
       </div>
     </transition>
