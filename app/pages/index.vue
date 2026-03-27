@@ -73,7 +73,8 @@
         </div>
 
         <!-- Slide 1 – Funds Flow & Surplus -->
-        <div v-else-if="slide === 1" class="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 md:max-w-6xl mx-auto p-4">
+        <div v-else-if="slide === 1"
+          class="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 md:max-w-6xl mx-auto p-4 overflow-hidden">
           <!-- Left Column -->
           <div class="lg:col-span-7 block md:flex flex-col md:gap-4">
             <!-- Surplus Highlight -->
@@ -81,16 +82,23 @@
               <div class="absolute top-0 right-0 p-8 opacity-5">
                 <Icon name="material-symbols:trending-up" class="text-9xl text-green-700" />
               </div>
-              <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full my-4" />
-              <p class="font-manrope text-xs font-bold uppercase tracking-widest text-black mb-4">
-                Annual Financial Result
-              </p>
-              <h3 class="text-7xl md:text-8xl font-notoSerif font-bold text-[gold] mb-2 tracking-tighter">
-                K{{ surplusDisplay }}m
-              </h3>
-              <p class="text-xl font-manrope font-medium text-black max-w-md">
-                Comprehensive surplus achieved through strategic fiscal oversight and improved revenue collection.
-              </p>
+              <div class="flex gap-4 itemes-center mb-6">
+                <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full my-4" />
+              </div>
+              
+              <div>
+                <h2 class="text-2xl font-bold text-black mb-2">FUNDS FLOW AND SURPLUS</h2>
+                <p class="font-manrope text-xs font-bold uppercase tracking-widest text-black mb-4">
+                  Annual Financial Result
+                </p>
+                <h3 class="text-7xl md:text-8xl font-notoSerif font-bold text-[gold] mb-2 tracking-tighter">
+                  K{{ surplusDisplay }}m
+                </h3>
+                <p class="text-xl font-manrope font-medium text-black max-w-md">
+                  Comprehensive surplus achieved through strategic fiscal oversight and improved revenue collection.
+                </p>
+              </div>
+
             </div>
 
             <!-- Strategic Bullets -->
@@ -115,7 +123,7 @@
           </div>
 
           <!-- Right Sidebar -->
-          <div class="lg:col-span-5">
+          <div class="lg:col-span-5 pb-8">
             <div class="sticky top-32 space-y-8">
               <!-- KPIs -->
               <div class="p-b px-6 bg-surface-container-high rounded-lg">
@@ -237,35 +245,38 @@
 
         </div>
 
-        <!-- Slide 3 – Financial Position -->
-        <div v-else-if="slide === 3" class="px-8 py-12 bg-surface text-on-surface font-body h-full">
-          <div>
-            <FinancialPosition />
-          </div>
-        </div>
-
         <!-- Slide 4 – Fidelity Fund -->
-        <div v-else-if="slide === 4" class="px-8 py-12 bg-surface text-on-surface font-body">
+        <div v-else-if="slide === 3" class="px-8 py-12 bg-surface text-on-surface font-body h-full">
+          <div  class="px-8 py-12 bg-surface text-on-surface font-body">
           <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4" />
           <Funds />
         </div>
+        </div>
+
+        
 
         <!-- Slide 5 – 2024 Outlook -->
-        <div v-else-if="slide === 5" class="px-8 py-12 bg-surface text-on-surface font-body">
+        <div v-else-if="slide === 4" class="px-8 py-12 bg-surface text-on-surface font-body">
+          <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4 mb-4" />
           <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-2">2024 OUTLOOK</h1>
-
           <Outlook />
+        </div>
+
+
+         <div v-else-if="slide === 5" class="px-8 py-12 bg-surface text-on-surface font-body">
+          <h2 class="flex items-center justify-center h-screen w-full text-6xl text-black font-bold">THANK YOU!</h2>
         </div>
       </div>
     </transition>
 
     <!-- Side Buttons -->
     <button @click="prevSlide"
-      class="fixed left-4 bottom-5 -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/80 px-6 py-2 rounded-full text-black shadow-2xl text-sm md:text-2xl transition-all">
+      v-if="slide > 0"
+      class="fixed left-4 bottom-5 -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/80 px-6 py-2 rounded-full text-black shadow-2xl text-sm transition-all">
       ‹Previous
     </button>
-    <button @click="nextSlide"
-      class="fixed right-4 bottom-5 -translate-y-1/2 bg-yellow-500 hover:bg-yellow-400 px-6 py-2 rounded-full text-black shadow-2xl md:text-2xl transition-all">
+    <button v-if="slide < totalSlides - 1" @click="nextSlide"
+      class="fixed right-4 bottom-5 -translate-y-1/2 bg-yellow-500 hover:bg-yellow-400 px-6 py-2 rounded-full text-black shadow-2xl transition-all">
       Next›
     </button>
 

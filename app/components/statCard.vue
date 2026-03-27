@@ -8,8 +8,10 @@
       </span>
     </div>
 
-    <!-- Chart -->
-    <Bar :data="chartData" :options="chartOptions" />
+    <!-- Responsive Chart -->
+    <div class="w-full h-64 sm:h-72 md:h-96">
+      <Bar :data="chartData" :options="chartOptions" class="w-full h-full" />
+    </div>
   </div>
 </template>
 
@@ -22,9 +24,9 @@ import {
   BarElement,
   CategoryScale,
   LinearScale
-} from 'chart.js'
+} from "chart.js";
 
-import { Bar } from 'vue-chartjs'
+import { Bar } from "vue-chartjs";
 
 ChartJS.register(
   Title,
@@ -33,54 +35,51 @@ ChartJS.register(
   BarElement,
   CategoryScale,
   LinearScale
-)
+);
 
 const props = defineProps({
   cards: {
     type: Array,
-    default: () => ([
+    default: () => [
       {
-        title: 'Personnel',
-        value: 'K133.0M',
-        subtitle: 'Employee Costs'
+        title: "Personnel",
+        value: "K133.0M",
+        subtitle: "Employee Costs"
       },
       {
-        title: 'Events',
-        value: 'K129.3M',
-        subtitle: 'AGM Logistics'
+        title: "Events",
+        value: "K129.3M",
+        subtitle: "AGM Logistics"
       },
       {
-        title: 'Professional Development',
-        value: 'K101.2M',
-        subtitle: 'CLE Workshops & Training'
+        title: "Professional Development",
+        value: "K101.2M",
+        subtitle: "CLE Workshops & Training"
       }
-    ])
+    ]
   }
-})
+});
 
 // Convert "K133.0M" → 133
 const parseValue = (val) => {
-  return parseFloat(val.replace(/[^0-9.]/g, ''))
-}
+  return parseFloat(val.replace(/[^0-9.]/g, ""));
+};
 
 const chartData = {
-  labels: props.cards.map(c => c.title),
+  labels: props.cards.map((c) => c.title),
   datasets: [
     {
-      label: 'Amount (Millions)',
-      data: props.cards.map(c => parseValue(c.value)),
-      backgroundColor: [
-        '#3B82F6', // Personnel - blue
-        '#10B981', // Events - green
-        '#F59E0B'  // Professional Development - amber
-      ],
+      label: "Amount (Millions)",
+      data: props.cards.map((c) => parseValue(c.value)),
+      backgroundColor: ["#3B82F6", "#10B981", "#F59E0B"],
       borderRadius: 8
     }
   ]
-}
+};
 
 const chartOptions = {
   responsive: true,
+  maintainAspectRatio: false, // ✅ allows height to be controlled by parent
   plugins: {
     legend: {
       display: false
@@ -99,5 +98,5 @@ const chartOptions = {
       }
     }
   }
-}
+};
 </script>
