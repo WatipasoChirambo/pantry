@@ -3,7 +3,9 @@
 
     <!-- Chart -->
     <div class="mt-6 w-full h-64 sm:h-72 md:h-80 block gap-5">
-        <p class="font-bold text-black mb-4">Key Performance Indicators <span class="text-[gold]">(KPIs)</span></p>
+      <p class="font-bold text-black mb-4">
+        Key Performance Indicators <span class="text-[gold]">(KPIs)</span>
+      </p>
       <Bar :data="chartData" :options="chartOptions" />
     </div>
   </div>
@@ -32,17 +34,21 @@ ChartJS.register(
   LinearScale
 );
 
-// KPI data
+// ✅ KPI data based on your financial information
 const chartData = {
-  labels: ["Revenue Growth", "Member Compliance", "Admin Overhead"],
+  labels: [
+    "Revenue Growth",
+    "Investment Income Growth",
+    "Surplus Growth"
+  ],
   datasets: [
     {
       label: "KPI Values (%)",
-      data: [12.4, 94, -2.1], // your values
+      data: [22.9, 10, 38.6], // ✅ your real KPI numbers
       backgroundColor: [
-        "#4CAF50", // green (positive)
-        "#1E90FF", // blue (high positive)
-        "#FF4C4C"  // red (negative)
+        "#1E90FF", // Revenue Growth (strong positive)
+        "#4CAF50", // Investment Income Growth (moderate positive)
+        "#1E90FF"  // Surplus Growth (strong positive)
       ],
       borderRadius: 6
     }
@@ -64,11 +70,11 @@ const chartOptions = {
   },
   scales: {
     y: {
-      beginAtZero: false, // ✅ allows negative values to show
-      min: -10,           // ✅ gives space below -2.1
-      max: 300,           // ✅ fits 94% nicely
+      beginAtZero: false,
+      min: 0,         // ✅ no negatives in your KPIs
+      max: 50,        // ✅ fits 22.9%, 10%, and 38.6% nicely
       ticks: {
-        stepSize: 20,     // ✅ increments: 0, 10, 20, 30...
+        stepSize: 10,
         callback: (val) => `${val}%`
       }
     }

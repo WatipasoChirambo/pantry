@@ -33,13 +33,13 @@
                     Annual Financial Review
                   </span>
                   <h2 class="font-headline text-black text-6xl md:text-8xl font-black tracking-tighter leading-tight">
-                    Treasurer's<br />Report 2024
+                    Treasurer's<br />Report 2026
                   </h2>
                 </div>
 
                 <div class="bg-surface-container-lowest p-8 border-l-8 border-[gold] shadow-sm max-w-2xl">
                   <p class="md:text-xl font-bold italic mb-2 text-gray-600 text-sm">
-                    Presented by <span class="text-[gold]">Kizito Kumwenda</span>, Treasurer
+                    Presented by <span class="text-black">Kizito Kumwenda</span>, Treasurer
                   </p>
                   <p class="font-body text-outline font-medium tracking-wide text-gray-400 text-sm md:text-base">
                     13 Months Period Ended 31st January 2025
@@ -63,7 +63,7 @@
                     alt="Luxury law library interior" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                   <div class="absolute bottom-6 left-6 text-white">
-                    <p class="font-headline font-bold text-xl tracking-tight">The 2024 Mandate</p>
+                    <p class="font-headline font-bold text-xl tracking-tight">The 2026 Mandate</p>
                     <p class="font-body text-sm opacity-80">Fiscal Integrity &amp; Oversight</p>
                   </div>
                 </div>
@@ -77,48 +77,49 @@
           class="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 md:max-w-7xl mx-auto p-4 overflow-hidden">
           <!-- Left Column -->
           <div class="lg:col-span-7 block md:flex flex-col md:gap-4">
+
             <!-- Surplus Highlight -->
             <div class="p-10 statute-bar relative">
               <div class="absolute top-0 right-0 p-8 opacity-5">
                 <Icon name="material-symbols:trending-up" class="text-9xl text-green-700" />
               </div>
+
               <div class="flex gap-4 itemes-center mb-6">
                 <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full my-4" />
               </div>
-              
-              <div>
+
+              <div class="w-full">
                 <h2 class="text-2xl font-bold text-black mb-2">FUNDS FLOW AND SURPLUS</h2>
                 <p class="font-manrope text-xs font-bold uppercase tracking-widest text-black mb-4">
                   Annual Financial Result
                 </p>
+
                 <h3 class="text-7xl md:text-8xl font-notoSerif font-bold text-[gold] mb-2 tracking-tighter">
                   K{{ surplusDisplay }}m
                 </h3>
-                <p class="text-xl font-manrope font-medium text-black max-w-md">
-                  Comprehensive surplus achieved through strategic fiscal oversight and improved revenue collection.
+
+                <!-- ✅ INSERTED FINANCIAL NARRATIVE -->
+                <p class="text-xl font-manrope font-medium text-black max-w-7xl leading-relaxed">
+                  The Society’s main sources of revenue during the year were membership subscriptions,
+                  levies on professional fees, and charges from Continuing Legal Education (CLE) workshops.
+                  Total inflows increased by <span class="font-bold text-[gold]">22.9%</span>, rising from
+                  <span class="font-bold">K1.1 billion</span> in 2025 to
+                  <span class="font-bold">K1.5 billion</span> in 2025/26, driven by higher membership uptake
+                  and an expanded schedule of CPD workshops. Notably, this amount includes
+                  <span class="font-bold text-black">K212.6 million</span> in Pro Bono income, which does not
+                  constitute Malawi Law Society funds.
+
+                  The Society also earned <span class="font-bold">K15.2 million</span> in money market investment
+                  income from fixed deposits with Continental Asset Management and FDH Bank—reflecting a
+                  <span class="font-bold text-[gold]">10% increase</span> from the previous year due to the
+                  investment of building project funds.
+
+                  The year concluded with a strong comprehensive surplus of
+                  <span class="font-bold text-[gold]">K393.3 million</span>, marking an impressive
+                  <span class="font-bold text-[gold]">38.6% growth</span>.
                 </p>
               </div>
 
-            </div>
-
-            <!-- Strategic Bullets -->
-            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-4">
-              <div class="bg-surface-container-low p-8">
-                <Icon name="material-symbols:verified_user" class="text-black mb-4" />
-                <h4 class="font-notoSerif font-bold text-xl text-[gold] mb-3">Statutory Compliance</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">
-                  Fully compliant with <span class="font-bold text-black">section 86(2) of LELPA</span>, ensuring
-                  transparency and accountability.
-                </p>
-              </div>
-              <div class="bg-surface-container-low p-8">
-                <Icon name="material-symbols:account_balance" class="text-black mb-4" />
-                <h4 class="font-notoSerif font-bold text-xl text-[gold] mb-3">Stable Financial Position</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">
-                  Resilient asset base and liquidity ratios maintained despite inflationary pressures in the domestic
-                  economy.
-                </p>
-              </div>
             </div>
           </div>
 
@@ -143,22 +144,41 @@
         <div v-else-if="slide === 2" class="overflow-scroll md:overflow-hidden md:max-w-7xl mx-auto p-10">
 
           <!-- Hero / Overview -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-24">
-            <div class="lg:col-span-7">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-24">
+            <!-- <div class="lg:col-span-7">
               <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mb-4" />
+
               <div class="statute-bar mb-6">
                 <span class="text-[gold] font-label font-extrabold uppercase tracking-[0.2em] text-xs">
                   Financial Disclosure 2024
                 </span>
               </div>
+
               <h2 class="font-headline font-black text-5xl md:text-7xl text-black leading-tight tracking-tighter mb-8">
                 Administrative <br />Expenses
               </h2>
-              <p class="text-gray-400 text-lg max-w-xl leading-relaxed">
-                Fiscal pressure remains elevated due to systemic economic shifts and the expansion of the Society's
-                public interest mandates.
+
+              
+              <p class="text-gray-400 text-lg max-w-7xl leading-relaxed">
+                Total administrative expenses increased by
+                <span class="font-bold text-white">35.8%</span>, rising from
+                <span class="font-bold text-white">K891.8 million</span> in 2025 to
+                <span class="font-bold text-white">K1,211.4 million</span> in 2025/26.
+                This rise was largely driven by inflationary pressures affecting fuel, accommodation,
+                and other operational inputs. Capital expenditure during the year amounted to
+                <span class="font-bold text-white">K4.9 million</span> (2025: K109.6 million),
+                primarily for office equipment.
+
+                Key lines contributing to the expenditure growth included: employee costs of
+                <span class="font-bold text-white">K222.9 million</span> (2025: K180.7m), AGM & Conference
+                expenses of K202.9m, Disciplinary Committee expenses of K62.8m, Executive meeting costs of
+                K36m, motor vehicle expenses of K68.9m, and CPD workshop expenses of
+                <span class="font-bold text-white">K149.6 million</span> (2025: K70.8m). Additional increases
+                were seen in advertising & publicity (K24.2m), office stationery (K35.6m), Public Interest
+                expenses at K38m related to the 2025 Elections, and Garnishee expenses amounting to
+                <span class="font-bold text-white">K108.7 million</span>.
               </p>
-            </div>
+            </div> -->
             <DoughnutChart />
           </div>
 
@@ -168,62 +188,81 @@
               Primary Expenditure Drivers
               <div class="h-[1px] flex-grow bg-outline-variant/30"></div>
             </h3>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <!-- Driver Cards -->
+
+              <!-- Fuel & Accommodation Inflation -->
               <div
                 class="bg-surface-container-lowest p-6 border-l-2 border-secondary/20 hover:border-secondary transition-colors group">
-                <Icon name="material-symbols:gavel" class="text-[gold] mb-4 block text-3xl" />
-                <h4 class="font-bold text-black mb-2">Pro bono Scheme</h4>
-                <p class="text-sm text-gray-600">Nationwide launch of the legal aid framework increasing
-                  operational reach.</p>
+                <Icon name="material-symbols:local-gas-station" class="text-[gold] mb-4 block text-3xl" />
+                <h4 class="font-bold text-black mb-2">Fuel & Accommodation</h4>
+                <p class="text-sm text-gray-600">
+                  Rising transportation and lodging costs driven by inflationary pressures.
+                </p>
               </div>
+
+              <!-- Employee Costs -->
               <div
                 class="bg-surface-container-lowest p-6 border-l-2 border-secondary/20 hover:border-secondary transition-colors group">
                 <Icon name="material-symbols:groups" class="text-[gold] mb-4 block text-3xl" />
-                <h4 class="font-bold text-black mb-2">Committee Activity</h4>
-                <p class="text-sm text-gray-600">Enhanced regulatory oversight and expanded subcommittee
-                  engagement cycles.</p>
+                <h4 class="font-bold text-black mb-2">Employee Costs</h4>
+                <p class="text-sm text-gray-600">
+                  Staff-related expenses increased to K222.9m from K180.7m to support operational capacity.
+                </p>
               </div>
+
+              <!-- Committee & Oversight Costs -->
               <div
                 class="bg-surface-container-lowest p-6 border-l-2 border-secondary/20 hover:border-secondary transition-colors group">
-                <Icon name="material-symbols:arrow-upward" class="text-[gold] mb-4 block text-3xl" />
-                <h4 class="font-bold text-black mb-2">MWK Devaluation</h4>
-                <p class="text-sm text-gray-600">Impact of the Malawi Kwacha exchange rate on imported
-                  materials and services.</p>
+                <Icon name="material-symbols:gavel" class="text-[gold] mb-4 block text-3xl" />
+                <h4 class="font-bold text-black mb-2">Committee Operations</h4>
+                <p class="text-sm text-gray-600">
+                  Higher activity levels increased disciplinary, AGM, conference, and executive meeting costs.
+                </p>
               </div>
+
+              <!-- Public Interest & Compliance Costs -->
               <div
                 class="bg-surface-container-lowest p-6 border-l-2 border-secondary/20 hover:border-secondary transition-colors group">
-                <Icon name="material-symbols:payments" class="text-[gold] mb-4 block text-3xl" />
-                <h4 class="font-bold text-black mb-2">General Inflation</h4>
-                <p class="text-sm text-gray-600">Systemic rising costs of utilities, stationery, and
-                  logistical fulfillment.</p>
+                <Icon name="material-symbols:campaign" class="text-[gold] mb-4 block text-3xl" />
+                <h4 class="font-bold text-black mb-2">Public Interest Mandate</h4>
+                <p class="text-sm text-gray-600">
+                  New public interest obligations, including 2025 Elections support, added significant costs.
+                </p>
               </div>
+
             </div>
           </section>
 
           <!-- Detailed Breakdown (Bento Cards) -->
           <section class="mb-32">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+
+              <!-- Header Card -->
               <div class="lg:col-span-4 bg-[gold] text-on-[gold] p-10 flex flex-col justify-between min-h-[400px]">
                 <div>
                   <h3 class="font-headline text-3xl text-black font-bold mb-6">Notable Increases</h3>
                   <p class="text-on-[gold]-container leading-relaxed text-black">
-                    Specific operational areas recorded significant growth in capital deployment to meet statutory
-                    obligations.
+                    Several expenditure lines recorded significant increases during the 2025/26 period due to inflation,
+                    expanded operational mandates, and higher regulatory activity.
                   </p>
                 </div>
+
                 <div class="flex items-center gap-4">
                   <div class="w-12 h-12 rounded-full border border-yellow-500/40 flex items-center justify-center">
                     <Icon name="material-symbols:insights" class="text-yellow-600 text-xl" />
                   </div>
-                  <span class="font-label text-xs uppercase tracking-widest font-semibold text-black">Expenditure
-                    Analysis</span>
+                  <span class="font-label text-xs uppercase tracking-widest font-semibold text-black">
+                    Expenditure Analysis
+                  </span>
                 </div>
               </div>
 
+              <!-- Cards List -->
               <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <StatCards :cards="data" />
               </div>
+
             </div>
           </section>
 
@@ -246,32 +285,37 @@
         </div>
 
         <!-- Slide 4 – Fidelity Fund -->
-        <div v-else-if="slide === 3" class="py-12 bg-surface text-on-surface font-body h-full md:max-w-7xl mx-auto p-10">
-          <div  class="px-8 py-12 bg-surface text-on-surface font-body">
-          <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4" />
-          <Funds />
-        </div>
+        <div v-else-if="slide === 3"
+          class="py-12 bg-surface text-on-surface font-body h-full md:max-w-7xl mx-auto p-10">
+          <div class="px-8 py-12 bg-surface text-on-surface font-body">
+            <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4" />
+            <Funds />
+          </div>
         </div>
 
-        
+
 
         <!-- Slide 5 – 2024 Outlook -->
         <div v-else-if="slide === 4" class="px-8 py-12 bg-surface text-on-surface font-body md:max-w-7xl mx-auto p-10">
           <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4 mb-4" />
-          <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-2">2024 OUTLOOK</h1>
+          <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-2">2025 OUTLOOK</h1>
           <Outlook />
         </div>
 
 
-         <div v-else-if="slide === 5" class="px-8 py-12 bg-surface text-on-surface font-body">
-          <h2 class="flex items-center justify-center h-screen w-full text-4xl md:text-6xl text-black font-bold">THANK YOU!</h2>
+        <div v-else-if="slide === 5" class="px-8 py-12 bg-surface text-on-surface font-body flex items-center justify-center h-screen w-full">
+          <div>
+            <p class="font-bold text-xl text-center text-[gold] mb-4">Kizito Kumwenda</p>
+            <h2 class="text-4xl md:text-6xl text-black font-bold">THANK
+            YOU!</h2>
+          </div>
+          
         </div>
       </div>
     </transition>
 
     <!-- Side Buttons -->
-    <button @click="prevSlide"
-      v-if="slide > 0"
+    <button @click="prevSlide" v-if="slide > 0"
       class="fixed left-4 bottom-5 -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/80 px-6 py-2 rounded-full text-black shadow-2xl text-sm transition-all">
       ‹Previous
     </button>
@@ -294,24 +338,14 @@ import Funds from '~/components/funds.vue'
 import Outlook from '~/components/outlook.vue'
 
 const data = [
-  {
-    title: 'Personnel',
-    value: 'K133.0M',
-    subtitle: 'Employee Costs',
-    icon: 'material-symbols:badge'
-  },
-  {
-    title: 'Events',
-    value: 'K129.3M',
-    subtitle: 'AGM Logistics',
-    icon: 'material-symbols:event-seat'
-  },
-  {
-    title: 'Professional Development',
-    value: 'K101.2M',
-    subtitle: 'CLE Workshops & Training',
-    icon: 'material-symbols:school'
-  }
+  { title: "Employee Costs", value: "K222.9m", prev: "K180.7m" },
+  { title: "AGM & Conference", value: "K202.9m", prev: "K199m" },
+  { title: "CPD Workshops", value: "K149.6m", prev: "K70.8m" },
+  { title: "Motor Vehicle Costs", value: "K68.9m", prev: "K39.6m" },
+  { title: "Disciplinary Committee", value: "K62.8m", prev: "K44.5m" },
+  { title: "Public Interest (Elections)", value: "K38m", prev: "Nil" },
+  { title: "Garnishee Expenses", value: "K108.7m", prev: "Nil" },
+  { title: "Office Stationery", value: "K35.6m", prev: "K28.3m" }
 ]
 
 // ------------------------
@@ -327,7 +361,7 @@ const goToSlide = () => slide.value = 1
 // Animated Counters
 // ------------------------
 const surplusDisplay = ref(0)
-const surplusTarget = 151.1
+const surplusTarget = 393.3
 
 const animateCounter = (display, target) => {
   let start = 0

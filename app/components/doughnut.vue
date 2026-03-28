@@ -1,5 +1,6 @@
 <template>
-  <div class="lg:col-span-5 bg-surface-container-low p-8 relative rounded-lg">
+  <div class="lg:col-span-5 relative rounded-lg">
+    <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mb-4" />
     <!-- Background accent -->
     <div class="absolute -top-4 -right-4 w-24 h-24 bg-secondary/10 -z-10"></div>
 
@@ -10,19 +11,46 @@
 
     <!-- Value -->
     <div class="flex items-baseline gap-2 mt-2">
-      <span class="text-5xl font-bold text-[gold]">K715.1</span>
+      <span class="text-5xl font-bold text-[gold]">K1,211.4</span>
       <span class="text-2xl text-black">Million</span>
     </div>
 
     <!-- Chart -->
-    <div class="mt-6 w-[18em]">
-      <Doughnut :data="chartData" :options="chartOptions" />
-    </div>
+    <div>
+      <div class="grid md:grid-cols-2 grid-cols-1">
+        <div class="mt-6 w-[18em]">
+          <Doughnut :data="chartData" :options="chartOptions" />
+          <div class="flex items-center gap-2 text-success font-bold mt-4">
+            <Icon name="material-symbols:trending-up" class="text-sm" />
+            <span>+35.8% Variance</span>
+          </div>
+        </div>
 
-    <!-- Growth -->
-    <div class="flex items-center gap-2 text-success font-bold mt-4">
-      <Icon name="material-symbols:trending-up" class="text-sm" />
-      <span>+22.4% Variance</span>
+        <!-- Growth -->
+
+        <div class="w-full">
+          <p class="text-gray-700 mt-6 max-w-7xl">
+            Total administrative expenses increased by
+            <span class="font-bold text-black">35.8%</span>, rising from
+            <span class="font-bold">K891.8 million</span> in 2025 to
+            <span class="font-bold">K1,211.4 million</span> in 2025/26.
+            This rise was driven by inflationary pressures affecting fuel, accommodation,
+            and operational costs.
+
+            Capital expenditure amounted to
+            <span class="font-bold">K4.9 million</span> (2025: K109.6 million),
+            mainly for additional office equipment.
+
+            Key expenditure movements included employee costs of
+            <span class="font-bold">K222.9 million</span> (2025: K180.7m), AGM & Conference
+            expenses of K202.9m, Motor Vehicle expenses of K68.9m, CPD workshop expenses of
+            K149.6m (2025: K70.8m), Disciplinary Committee costs of K62.8m, Executive meetings
+            at K36m, Public Interest expenses of K38m related to the 2025 Elections, and
+            Garnishee expenses of <span class="font-bold">K108.7 million</span>.
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -38,15 +66,15 @@ import { Doughnut } from 'vue-chartjs'
 
 ChartJS.register(ArcElement, Tooltip)
 
-// Example: show growth vs remaining (100% baseline)
+// ✅ Updated: 35.8% expense growth
 const chartData = {
-  labels: ['Growth', 'Remaining'],
+  labels: ['Expense Increase', 'Remaining'],
   datasets: [
     {
-      data: [22.4, 77.6],
+      data: [35.8, 64.2],
       backgroundColor: [
-        '#E6C200', // green = growth
-        '#E5E7EB'  // gray = remainder
+        '#E6C200', // gold = growth
+        '#E5E7EB'  // gray = remaining
       ],
       borderWidth: 0
     }
@@ -54,7 +82,7 @@ const chartData = {
 }
 
 const chartOptions = {
-  cutout: '70%', // makes it look like a gauge
+  cutout: '70%',
   plugins: {
     tooltip: {
       callbacks: {

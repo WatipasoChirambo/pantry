@@ -7,31 +7,58 @@
       </h1>
 
       <p class="mb-4 text-gray-500 text-sm sm:text-base">
-        The Society received a total sum of K23.4 million (2022: K36.6 million)
-        contribution towards the fidelity fund. A total of K152.7 million was
-        invested with the Old Mutual Unit Trust and generated a finance income
-        of K22.5 million. Fidelity Fund has a total sum of K196 million.
-        An amount of K100 million which the Malawi Law Society borrowed last
-        year to finance the building project was repaid during the year under
-        review with interest.
+        The Society received a total sum of <strong>K51.9 million</strong> (2025: K47.5 million) 
+        towards the Fidelity Fund. A total of <strong>K283.7 million</strong> was invested with 
+        the Old Mutual Unit Trust, generating a finance income of <strong>K57.8 million</strong>. 
+        The Fidelity Fund now holds a total sum of <strong>K393.3 million</strong>.
       </p>
     </div>
 
+    <!-- NEW KPI ROW -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 mb-8">
+      <div class="bg-surface-container-high rounded p-4">
+        <p class="text-xs text-gray-500 uppercase">Contribution Growth</p>
+        <p class="text-2xl font-bold text-green-600">
+          +{{ contributionGrowthDisplay }}%
+        </p>
+      </div>
+
+      <div class="bg-surface-container-high rounded p-4">
+        <p class="text-xs text-gray-500 uppercase">Investment Income Growth</p>
+        <p class="text-2xl font-bold text-green-600">
+          +{{ incomeGrowthDisplay }}%
+        </p>
+      </div>
+
+      <div class="bg-surface-container-high rounded p-4">
+        <p class="text-xs text-gray-500 uppercase">Fund Growth</p>
+        <p class="text-2xl font-bold text-green-600">
+          +{{ fundGrowthDisplay }}%
+        </p>
+      </div>
+    </div>
+
     <!-- Highlights -->
-    <div class="mt-6 flex gap-4 flex-wrap gap-4">
+    <div class="mt-6 flex gap-4 flex-wrap">
       <div class="p-4 bg-surface-container-high rounded">
         <span class="text-gray-500 text-xs sm:text-sm">Total Fund</span>
-        <div class="text-xl sm:text-2xl font-bold text-[gold]">K196M</div>
+        <div class="text-xl sm:text-2xl font-bold text-[gold]">
+          K{{ totalFundDisplay }}M
+        </div>
       </div>
 
       <div class="p-4 bg-surface-container-high rounded">
         <span class="text-gray-500 text-xs sm:text-sm">Investment Income</span>
-        <div class="text-xl sm:text-2xl font-bold text-green-600">K22.5M</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600">
+          K{{ incomeDisplay }}M
+        </div>
       </div>
 
       <div class="p-4 bg-surface-container-high rounded">
-        <span class="text-gray-500 text-xs sm:text-sm">Loan Repayment</span>
-        <div class="text-xl sm:text-2xl font-bold text-red-500">K100M</div>
+        <span class="text-gray-500 text-xs sm:text-sm">Annual Contributions</span>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600">
+          K{{ contributionDisplay }}M
+        </div>
       </div>
     </div>
 
@@ -43,6 +70,7 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
 import {
   Chart as ChartJS,
   BarElement,
@@ -56,19 +84,53 @@ import { Bar } from "vue-chartjs";
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
+/* ✅ Simple animation utility */
+function useCounter(target, speed = 20) {
+  const value = ref(0);
+  onMounted(() => {
+    const update = () => {
+      if (value.value < target) {
+        value.value += Math.ceil(target / speed);
+        requestAnimationFrame(update);
+      } else {
+        value.value = target;
+      }
+    };
+    update();
+  });
+  return value;
+}
+
+/* ✅ Animated KPI values */
+const totalFundDisplay = useCounter(393.3);
+const incomeDisplay = useCounter(57.8);
+const contributionDisplay = useCounter(51.9);
+
+/* ✅ KPI Growth Rates */
+const contributionGrowthDisplay = useCounter(
+  (((51.9 - 47.5) / 47.5) * 100).toFixed(1)
+);
+const incomeGrowthDisplay = useCounter(
+  (((57.8 - 22.5) / 22.5) * 100).toFixed(1)
+);
+const fundGrowthDisplay = useCounter(
+  (((393.3 - 196) / 196) * 100).toFixed(1)
+);
+
+/* ✅ Updated Chart Data */
 const chartData = {
-  labels: ["Contributions", "Investments", "Income", "Loan Repayment"],
+  labels: ["Contributions", "Investments", "Income"],
   datasets: [
     {
-      label: "2023 (K Millions)",
-      data: [23.4, 152.7, 22.5, 100],
-      backgroundColor: ["#3B82F6", "#10B981", "#F59E0B", "#EF4444"],
+      label: "2025 (K Millions)",
+      data: [51.9, 283.7, 57.8],
+      backgroundColor: ["#3B82F6", "#10B981", "#F59E0B"],
       borderRadius: 8
     },
     {
-      label: "2022 (K Millions)",
-      data: [36.6, 0, 0, 0],
-      backgroundColor: ["#93C5FD", "#D1FAE5", "#FCD34D", "#FCA5A5"],
+      label: "2024 (K Millions)",
+      data: [47.5, 0, 0],
+      backgroundColor: ["#93C5FD", "#D1FAE5", "#FCD34D"],
       borderRadius: 8
     }
   ]
@@ -76,14 +138,11 @@ const chartData = {
 
 const chartOptions = {
   responsive: true,
-  maintainAspectRatio: false, // ✅ allows full responsive height
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       position: "top",
-      labels: {
-        boxWidth: 15,
-        padding: 10
-      }
+      labels: { boxWidth: 15, padding: 10 }
     },
     tooltip: {
       callbacks: {
@@ -95,7 +154,7 @@ const chartOptions = {
     y: {
       beginAtZero: true,
       ticks: {
-        stepSize: 50, // ✅ clean scale: 0, 50, 100, 150, 200
+        stepSize: 50,
         callback: (val) => `K${val}M`
       }
     }

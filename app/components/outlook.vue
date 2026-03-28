@@ -3,19 +3,22 @@
 
     <!-- Description -->
     <div class="space-y-4 text-sm sm:text-base text-gray-600 mb-6">
+
       <p>
-        <strong>Income:</strong> For 2024, income is likely to increase due to anticipated growth in membership, a
-        proposed increase in membership fees, higher CLE workshop attendance, expected increased levy remittance
-        from members, and improved levy recovery measures planned by the Society. We also anticipate more donor
-        funding on major public interest projects undertaken by the Society.
+        <strong>Income:</strong> For 2025, income is projected to increase due to anticipated growth in membership,
+        the proposed increase in membership fees, higher CPD workshop attendance, improved compliance in levy
+        remittance from members, and strengthened levy recovery measures to be implemented by the Society. 
+        Additional growth is expected from donor funding towards major public interest projects currently underway.
       </p>
 
       <p>
-        <strong>Expenses:</strong> Expenses in 2024 are expected to rise due to increased operations, higher cost
-        of goods and services, staff costs, and capital expenditure (including expected expenses by the Land
-        Development Committee and the purchase of the CEO’s motor vehicle). General expenses are also likely to
-        increase due to inflationary pressures and overall price increases in commodities and services.
+        <strong>Expenses:</strong> Expenses in 2025 are expected to rise due to an increase in the Society’s operational
+        activities, higher costs of goods and services, rising staff costs, and planned capital expenditure. 
+        This includes expenditures by the Land Development Committee and the purchase of a motor vehicle to 
+        reduce long‑term maintenance costs. General expenses are also expected to increase as a result of 
+        inflationary pressures and the overall rise in commodity and service prices.
       </p>
+
     </div>
 
     <!-- Outlook Chart -->
@@ -24,7 +27,7 @@
     </div>
 
     <p class="text-gray-600 text-sm sm:text-base">
-      I would like to sincerely appreciate the support you render to my office and the timely payments you make.
+      I would like to appreciate the support you render to my office and the payments that you make.
     </p>
 
   </div>
@@ -44,19 +47,19 @@ import { Bar } from "vue-chartjs";
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-// Example data for 2024 outlook
+// Example data for 2025 outlook (you may adjust values)
 const chartData = {
   labels: ["Income", "Expenses"],
   datasets: [
     {
-      label: "2024 Projection (K Millions)",
-      data: [200, 150],
+      label: "2025 Projection (K Millions)",
+      data: [230, 180], // ✅ Adjust if needed
       backgroundColor: ["#10B981", "#EF4444"],
       borderRadius: 8
     },
     {
-      label: "2023 Actual (K Millions)",
-      data: [180, 130],
+      label: "2024 Actual (K Millions)",
+      data: [200, 150],
       backgroundColor: ["#93C5FD", "#FCA5A5"],
       borderRadius: 8
     }
@@ -80,7 +83,7 @@ const chartOptions = {
     y: {
       beginAtZero: true,
       ticks: {
-        stepSize: 50, // ✅ makes scale cleaner: 0, 50, 100, 150, 200
+        stepSize: 50,
         callback: (val) => `K${val}M`
       }
     }
