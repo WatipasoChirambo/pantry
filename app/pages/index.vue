@@ -42,7 +42,7 @@
                     Presented by <span class="text-black">Kizito Kumwenda</span>, Treasurer
                   </p>
                   <p class="font-body text-outline font-medium tracking-wide text-gray-400 text-sm md:text-base">
-                    13 Months Period Ended 31st January 2025
+                    13 Months Period Ended 31st January 2026
                   </p>
                 </div>
 
