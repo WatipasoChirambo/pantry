@@ -29,7 +29,7 @@
         <!-- Growth -->
 
         <div class="w-full">
-          <p class="text-gray-700 mt-6 max-w-7xl">
+          <p class="text-gray-700 mt-6 max-w-7xl md:text-xl">
             Total administrative expenses increased by
             <span class="font-bold text-black">35.8%</span>, rising from
             <span class="font-bold">K891.8 million</span> in 2025 to
