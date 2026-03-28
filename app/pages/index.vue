@@ -286,7 +286,7 @@
 
         <!-- Slide 4 – Fidelity Fund -->
         <div v-else-if="slide === 3"
-          class="py-12 bg-surface text-on-surface font-body h-full md:max-w-7xl mx-auto p-10">
+          class="py-12 bg-surface text-on-surface font-body h-full max-w-7xl mx-auto">
           <div class="px-8 py-12 bg-surface text-on-surface font-body">
             <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4" />
             <Funds />
@@ -296,7 +296,7 @@
 
 
         <!-- Slide 5 – 2024 Outlook -->
-        <div v-else-if="slide === 4" class="px-8 py-12 bg-surface text-on-surface font-body md:max-w-7xl mx-auto p-10">
+        <div v-else-if="slide === 4" class="px-8 py-12 bg-surface text-on-surface font-body md:max-w-7xl mx-auto">
           <NuxtImg src="/favicon.jpeg" class="h-24 w-24 rounded-full mt-4 mb-4" />
           <h1 class="text-5xl md:text-6xl font-black font-headline text-[gold] mb-2">2025 OUTLOOK</h1>
           <Outlook />
